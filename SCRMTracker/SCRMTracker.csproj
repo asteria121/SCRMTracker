@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows7.0</TargetFramework>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<PlatformTarget>x64</PlatformTarget>
+
+		<NeutralLanguage>ko-KR</NeutralLanguage>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Version>1.0.0</Version>
+
+		<AssemblyTitle>StarCraft: Remastered Player Tracker</AssemblyTitle>
+		<Product>SCRMTracker</Product>
+		<Description>StarCraft: Remastered Player Tracker</Description>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MahApps.Metro" Version="2.4.11" />
+		<PackageReference Include="MahApps.Metro.IconPacks.FeatherIcons" Version="6.2.1" />
+		<PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="6.2.1" />
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TrackerCore\TrackerCore.vcxproj">
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+		</ProjectReference>
+	</ItemGroup>
+
+	<Target Name="CopyTrackerCoreDll" AfterTargets="Build">
+		<Copy SourceFiles="..\Output\x64\$(Configuration)\TrackerCore.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+		<Copy SourceFiles="..\Output\x64\$(Configuration)\TrackerCore.pdb" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+		<Message Text="TrackerCore.dll copied to $(TargetDir)" Importance="high" />
+	</Target>
+
+	<ItemGroup>
+		<None Update="Sounds\blacklist.wav">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

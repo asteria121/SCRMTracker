@@ -1,0 +1,25 @@
+﻿<Controls:Flyout x:Class="SCRMTracker.ModifyFlyout"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:c="clr-namespace:SCRMTracker"
+                 xmlns:glob="clr-namespace:System.Globalization;assembly=mscorlib"
+                 Width="250"
+                 Header="정보 수정"
+                 mc:Ignorable="d" IsModal="True" Position="Right">
+
+    <StackPanel Margin="10">
+        <TextBox x:Name="BattleTagTextBox" Margin="0 5 0 0" Controls:TextBoxHelper.UseFloatingWatermark="True" Controls:TextBoxHelper.Watermark="배틀태그" MaxHeight="39" IsReadOnly="True"/>
+        <DatePicker x:Name="MeetDateTimePicker" 
+                         Margin="0 5 0 0" 
+                         Controls:TextBoxHelper.UseFloatingWatermark="True" 
+                         Controls:TextBoxHelper.Watermark="등록일" IsEnabled="False">
+        </DatePicker>
+        <TextBox x:Name="CommentTextBox" Margin="0 5 0 0" Controls:TextBoxHelper.UseFloatingWatermark="True" Controls:TextBoxHelper.Watermark="메모" MaxLength="128" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        <CheckBox x:Name="IsBlackListCheckBox" Margin="0 5 0 0" Content="블랙리스트 지정"></CheckBox>
+        <Button x:Name="confirmButton" Margin="0 30 0 0" Content="저장" Click="confirmButton_Click"/>
+
+    </StackPanel>
+</Controls:Flyout>

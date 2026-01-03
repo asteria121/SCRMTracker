@@ -1,0 +1,61 @@
+﻿<Controls:MetroWindow x:Class="SCRMTracker.AboutWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      Title="프로그램 정보"
+                      Width="400"
+                      Height="330"
+                      WindowStartupLocation="CenterScreen"
+                      mc:Ignorable="d" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize">
+    <StackPanel Margin="10,10,10,10">
+        <Label x:Name="ProgramTitle" Content="SC:RM Player Tracker v1.0.0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="Open source information" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RichTextBox HorizontalAlignment="Center" Height="110" VerticalAlignment="Top" IsReadOnly="True" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Disabled" Controls:TextBoxHelper.WatermarkWrapping="Wrap" FontSize="11">
+            <FlowDocument>
+                <Paragraph FontSize="12">
+                    <Bold>MahApps.Metro v2.4.11</Bold>
+                    <LineBreak />
+                    <Hyperlink>https://github.com/MahApps/MahApps.Metro</Hyperlink>
+                    <LineBreak />
+                    Copyright © .NET Foundation and Contributors. All rights reserved.
+                    <LineBreak />
+                    ▶ MIT License
+                    <LineBreak />
+                    <LineBreak />
+                    <Bold>Microsoft.Data.Sqlite v10.0.1</Bold>
+                    <LineBreak />
+                    <Hyperlink>https://github.com/dotnet/dotnet</Hyperlink>
+                    <LineBreak />
+                    Copyright © Microsoft Corporation. All rights reserved.
+                    <LineBreak />
+                    ▶ MIT License
+                    <LineBreak />
+                    <LineBreak />
+                    <Bold>Newtonsoft.Json v13.0.4</Bold>
+                    <LineBreak />
+                    <Hyperlink>https://github.com/JamesNK/Newtonsoft.Json</Hyperlink>
+                    <LineBreak />
+                    Copyright © James Newton-King. All rights reserved.
+                    <LineBreak />
+                    ▶ MIT License
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Width="380" TextWrapping="Wrap" FontSize="10.5">
+            Developed by Asteria
+            <LineBreak/>
+            E-Mail : asteria121@protonmail.ch
+            <LineBreak/>
+            Public Repository: <Hyperlink>https://github.com/asteria121/SCRMTracker</Hyperlink>
+            <LineBreak />
+            <LineBreak />
+            SC:RM Player Tracker is not associated with Blizzard Entertainment, Inc and does not reflect the views or opinions of Blizzard Entertainment, Inc.
+            <LineBreak />
+            StarCraft: Remastered is registered trademark of Blizzard Entertainment, Inc.
+        </TextBlock>
+    </StackPanel>
+
+</Controls:MetroWindow>

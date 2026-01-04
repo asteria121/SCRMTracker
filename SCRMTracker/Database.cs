@@ -231,6 +231,7 @@ namespace SCRMTracker
                     {
                         cmd.Parameters.AddWithValue("@tag", player.BattleTag);
                         result += await cmd.ExecuteNonQueryAsync();
+                        cmd.Parameters.Clear();
                     }
                 }
             }

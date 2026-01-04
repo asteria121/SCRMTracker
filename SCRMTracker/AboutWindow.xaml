@@ -11,7 +11,7 @@
                       WindowStartupLocation="CenterScreen"
                       mc:Ignorable="d" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize">
     <StackPanel Margin="10,10,10,10">
-        <Label x:Name="ProgramTitle" Content="SC:RM Player Tracker v1.0.0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"/>
+        <Label x:Name="ProgramTitle" Content="SC:RM Player Tracker v1.0.1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"/>
         <Label Content="Open source information" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <RichTextBox HorizontalAlignment="Center" Height="110" VerticalAlignment="Top" IsReadOnly="True" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Disabled" Controls:TextBoxHelper.WatermarkWrapping="Wrap" FontSize="11">
             <FlowDocument>
